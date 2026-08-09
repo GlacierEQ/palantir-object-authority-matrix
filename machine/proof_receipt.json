@@ -2,27 +2,30 @@
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/palantir-object-authority-matrix",
   "source_sha": "4e72ff61164773a4cd22d4b0c745367ddea1c3595f21ae6e5b02fceb9be2fdfa",
-  "proof_id": "wave-a-residual-palantir-object-authority-matrix-1786260727",
+  "proof_id": "wave-a-residual-green-palantir-object-authority-matrix-1786261245",
   "environment": {
-    "python": "3.9.6"
+    "python": "3.9.6",
+    "PYTHONPATH": "."
   },
   "tests": [
-    "unittest discover -s tests -v (x2)"
+    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
   ],
   "runtime": {
     "operate": "scripts/operate.py (x2)",
-    "dual_run_ok": true
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
   },
   "result": "PASS",
   "limitations": [
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T07:32Z",
+  "timestamp": "2026-08-09T07:40Z",
   "artifact_hashes": {
-    "operability_receipt": "bb307539c3bbc3350d7d2214edd4438b37ca91d5dfad890f4bf631cf930772d3"
-  }
+    "operability_receipt": "8a7d739045a250eba582ad4455d2703d90de8ba837ef93c571f20d7e9d2bbcc8"
+  },
+  "scratch_proof_log": "wave_a/palantir-object-authority-matrix/proof.log"
 }

@@ -2,9 +2,9 @@
   "schema": "glaciereq.promotion-authority-grant.v1",
   "repository": "GlacierEQ/palantir-object-authority-matrix",
   "source_sha": "4e72ff61164773a4cd22d4b0c745367ddea1c3595f21ae6e5b02fceb9be2fdfa",
-  "proof_receipt_digest": "e0d1d48b88509c8bd7f1a8167f10f16852902617a314098e58b405927c0a927b",
-  "not_after": 1786347127.216716,
-  "mac": "e11ba81fc049e7f1142656ae6583b26879fe3c7122d3e0215c36cf7c6bdcbf8e",
+  "proof_receipt_digest": "e5d507af173311026a2be2274c03e51f87d6e621ef975ae0832051c8cd4da85e",
+  "not_after": 1786347645.105215,
+  "mac": "83aead83fcf642147cd2366ede2c383c1433e0356e5a1c4bd768bba56a89f1c7",
   "issuer": "local_operator_promotion_authority",
   "verified": true
 }
