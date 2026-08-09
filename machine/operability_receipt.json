@@ -1,0 +1,15 @@
+{
+  "schema": "glaciereq.operability-receipt.v1",
+  "repository": "GlacierEQ/palantir-object-authority-matrix",
+  "at": "2026-08-09T07:32Z",
+  "source_sha": "4e72ff61164773a4cd22d4b0c745367ddea1c3595f21ae6e5b02fceb9be2fdfa",
+  "entry": "scripts/operate.py",
+  "primary_output": {
+    "delete_allowed": false,
+    "deny_reason": "DEFAULT_DENY",
+    "ok": true,
+    "write_allowed": true
+  },
+  "dual_run_ok": true,
+  "result": "PASS"
+}

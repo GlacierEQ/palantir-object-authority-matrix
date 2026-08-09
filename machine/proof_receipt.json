@@ -1,0 +1,28 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/palantir-object-authority-matrix",
+  "source_sha": "4e72ff61164773a4cd22d4b0c745367ddea1c3595f21ae6e5b02fceb9be2fdfa",
+  "proof_id": "wave-a-residual-palantir-object-authority-matrix-1786260727",
+  "environment": {
+    "python": "3.9.6"
+  },
+  "tests": [
+    "unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-09T07:32Z",
+  "artifact_hashes": {
+    "operability_receipt": "bb307539c3bbc3350d7d2214edd4438b37ca91d5dfad890f4bf631cf930772d3"
+  }
+}
