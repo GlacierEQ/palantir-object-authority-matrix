@@ -1,0 +1,1 @@
+"""palantir-object-authority-matrix."""
