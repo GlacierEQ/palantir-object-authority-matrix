@@ -5,11 +5,11 @@
     "family": "object_action_authority_matrix"
   },
   "current": {
-    "state": "PROMOTED",
+    "state": "EVOLVING",
     "implemented": true,
     "tested": true,
     "deployed": false,
-    "canonical_position_pending_exact_head_proof": true
+    "canonical_position_pending_exact_head_proof": false
   },
   "target": {
     "purpose": "Replace scattered role checks with an explicit, auditable, default-deny object-type/verb authority matrix.",
@@ -41,7 +41,11 @@
     "require_exact_source_sha": true,
     "require_receipt": true,
     "require_nonclaims": true,
-    "next_gate": "CANONICAL_POSITION_RESOLVED"
+    "next_gate": "EVOLUTION_CURSOR_DEFINED"
+  },
+  "evolution": {
+    "cursor": "next:add_explicit_deny_and_property_effect_time_scopes_then_authenticated_identity_binding",
+    "composition_gate": "Do not bind to lineage or writeback siblings until executable receipt-to-receipt integration proof exists."
   },
   "nonclaims": [
     "no Palantir affiliation",
