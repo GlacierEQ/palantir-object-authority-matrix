@@ -1,16 +1,28 @@
 {
   "schema": "glaciereq.operability-receipt.v1",
   "repository": "GlacierEQ/palantir-object-authority-matrix",
-  "at": "2026-08-09T07:40Z",
-  "source_sha": "4e72ff61164773a4cd22d4b0c745367ddea1c3595f21ae6e5b02fceb9be2fdfa",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "136c2ac992f321a97516a72f0be126d7e9913255ed28b283aa2d0daf454f3cff",
   "entry": "scripts/operate.py",
   "primary_output": {
-    "delete_allowed": false,
-    "deny_reason": "DEFAULT_DENY",
+    "module": "authority",
     "ok": true,
-    "write_allowed": true
+    "repository": "GlacierEQ/palantir-object-authority-matrix",
+    "smoke": {
+      "args": [
+        "'sample_actor_role'",
+        "'sample_object_type'",
+        "<Verb.READ: 'READ'>"
+      ],
+      "content_checked": true,
+      "invoked": true,
+      "kind": "class",
+      "method": "check",
+      "module_local": true,
+      "name": "ObjectAuthorityMatrix",
+      "result": "AuthDecision(allowed=False, reason='DEFAULT_DENY', fingerprint='fb0d467681c47e75996db1fcdef470d37025256a5562f5ed6915e19180d52692')"
+    }
   },
   "dual_run_ok": true,
-  "result": "PASS",
-  "scratch_launch_log": "wave_a/palantir-object-authority-matrix/launch.log"
+  "result": "PASS"
 }

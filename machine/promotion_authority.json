@@ -1,10 +1,11 @@
 {
   "schema": "glaciereq.promotion-authority-grant.v1",
   "repository": "GlacierEQ/palantir-object-authority-matrix",
-  "source_sha": "4e72ff61164773a4cd22d4b0c745367ddea1c3595f21ae6e5b02fceb9be2fdfa",
-  "proof_receipt_digest": "e5d507af173311026a2be2274c03e51f87d6e621ef975ae0832051c8cd4da85e",
-  "not_after": 1786347645.105215,
-  "mac": "83aead83fcf642147cd2366ede2c383c1433e0356e5a1c4bd768bba56a89f1c7",
+  "source_sha": "136c2ac992f321a97516a72f0be126d7e9913255ed28b283aa2d0daf454f3cff",
+  "proof_receipt_digest": "8055e22522161e37ee80be018de72f437f85c1de2459209b4649dcbf1ec67bc8",
+  "not_after": 1788927149.234226,
+  "mac": "632fc4fd69ac8c7f45790473b10817da4ab697ea80d30a93c72538bac2b0485b",
   "issuer": "local_operator_promotion_authority",
-  "verified": true
+  "verified": true,
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
 }

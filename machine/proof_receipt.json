@@ -1,14 +1,15 @@
 {
   "schema": "glaciereq.proof-receipt.v1",
   "repository": "GlacierEQ/palantir-object-authority-matrix",
-  "source_sha": "4e72ff61164773a4cd22d4b0c745367ddea1c3595f21ae6e5b02fceb9be2fdfa",
-  "proof_id": "wave-a-residual-green-palantir-object-authority-matrix-1786261245",
+  "source_sha": "136c2ac992f321a97516a72f0be126d7e9913255ed28b283aa2d0daf454f3cff",
+  "proof_id": "elite-palantir-object-authority-matrix-1786335149",
   "environment": {
-    "python": "3.9.6",
-    "PYTHONPATH": "."
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/palantir-object-authority-matrix:/Users/kcbflux/job-app/repos/palantir-object-authority-matrix/src",
+    "entry": "unittest"
   },
   "tests": [
-    "PYTHONPATH=. python3 -m unittest discover -s tests -v (x2)"
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
@@ -23,9 +24,8 @@
     "not production deployed",
     "reference implementation only"
   ],
-  "timestamp": "2026-08-09T07:40Z",
+  "timestamp": "2026-08-10T04:12Z",
   "artifact_hashes": {
-    "operability_receipt": "8a7d739045a250eba582ad4455d2703d90de8ba837ef93c571f20d7e9d2bbcc8"
-  },
-  "scratch_proof_log": "wave_a/palantir-object-authority-matrix/proof.log"
+    "operability_receipt": "63542336c1e9c5877b316dade51ff75be2912c9bbc669d5b51f70245c080c61f"
+  }
 }
