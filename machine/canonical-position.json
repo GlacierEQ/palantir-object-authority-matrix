@@ -1,0 +1,22 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/palantir-object-authority-matrix",
+  "position_state": "RESOLVED",
+  "role": "company_specific_specialist_system",
+  "company_target": "Palantir",
+  "canonical_identity": "object-authority-matrix",
+  "unique_value": [
+    "object/action authority is expressed as an explicit default-deny matrix rather than scattered role checks",
+    "unknown object/action combinations deny by default",
+    "wildcard authority is bounded and auditable"
+  ],
+  "capability_contribution": {
+    "family": "object_action_authority_matrix",
+    "extractable_mechanisms": ["default-deny object/action matrix", "bounded wildcard authority", "auditable authorization decisions"],
+    "ownership": "This repository remains the owning Palantir-specialist implementation; extraction preserves identity and lineage."
+  },
+  "integration_policy": {"preserve_repository_identity":true,"preserve_lineage":true,"presentation_independent":true,"size_or_loc_not_dispositive":true,"absorption_requires_functional_equivalence":true,"absorption_requires_proof_equivalence":true},
+  "next_evolution": "Add ontology-aware authority inheritance, explicit deny explanations, and conflict resolution across nested object/action scopes without weakening default deny.",
+  "evidence_refs": ["ISSUE_CONTRACT.md","machine/target-contract.json","machine/proof_receipt.json","machine/operability_receipt.json","machine/promotion_authority.json"],
+  "nonclaims": ["no Palantir affiliation", "not a production Palantir authorization service"]
+}
