@@ -44,6 +44,14 @@
       "boundary": "authorization may gate future writeback, but executable receipt binding has not yet been exercised"
     }
   ],
+  "integration_policy": {
+    "preserve_repository_identity": true,
+    "preserve_lineage": true,
+    "presentation_independent": true,
+    "size_or_loc_not_dispositive": true,
+    "absorption_requires_functional_equivalence": true,
+    "absorption_requires_proof_equivalence": true
+  },
   "next_evolution": "Add explicitly modeled deny rules and property/effect/time scopes only after preserving the current default-deny contract; then bind authenticated identity and writeback receipts through executable integration proof.",
   "evidence_refs": [
     "src/authority.py",
