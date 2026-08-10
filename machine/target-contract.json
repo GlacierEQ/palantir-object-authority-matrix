@@ -1,64 +1,57 @@
 {
   "schema": "glaciereq.repo-target-contract.v1",
-<<<<<<< HEAD
-  "identity": {"repository_id": "GlacierEQ/palantir-object-authority-matrix"},
+  "identity": {
+    "repository_id": "GlacierEQ/palantir-object-authority-matrix",
+    "family": "object_action_authority_matrix"
+  },
   "current": {
-    "principal_state": "PROMOTED",
+    "state": "EVOLVING",
     "implemented": true,
     "tested": true,
-    "adversarial_verified": true,
-    "operable": true,
-    "proof_receipt_bound": true,
-    "authority_bound": true,
-    "deployed": false
+    "deployed": false,
+    "canonical_position_pending_exact_head_proof": false
   },
   "target": {
-    "purpose": "Replace ad-hoc object authorization with an explicit default-deny authority matrix whose wildcard behavior is bounded and auditable.",
-    "central_bottleneck": "New or unfamiliar object types can inherit unsafe authority when role checks are scattered and default behavior is permissive.",
+    "purpose": "Replace scattered role checks with an explicit, auditable, default-deny object-type/verb authority matrix.",
+    "central_bottleneck": "Consequential systems become unsafe when unfamiliar object/action combinations inherit authority implicitly or wildcard grants cannot be distinguished from exact grants.",
     "success": [
-      "Object/action authority is expressed through an explicit allowlist matrix.",
-      "Unknown object or action combinations default deny.",
-      "Wildcard authority is controlled and leaves auditable evidence."
+      "Unknown actor/object/verb combinations default deny.",
+      "Exact and wildcard grants are distinguished in the authorization decision.",
+      "The matched grant is bound into the decision fingerprint.",
+      "Malformed grants are rejected at construction.",
+      "Authorization remains separate from execution, lineage validation, and writeback."
     ]
   },
   "invariants": [
     "unknown object/action combinations default deny",
     "allow authority is explicit",
-    "wildcard authority is bounded and auditable"
+    "wildcard authority identifies the exact matched wildcard rule",
+    "malformed request dimensions refuse without throwing open",
+    "authorization decisions are deterministic and auditable",
+    "this mechanism does not execute the authorized action"
   ],
   "donor_plan": {
     "status": "RESOLVED",
     "strategy": "INDEPENDENT_MECHANISM_PRESERVED",
     "donors": [],
-    "basis": "The current repository owns the implemented object-authority mechanism; no donor implementation is required to define or operate it.",
-    "future_extraction": "Reusable authority-matrix semantics may be extracted only with lineage, functional/proof equivalence, and preservation of this repository's identity."
+    "basis": "The current repository owns the object-type/verb authority mechanism; sibling lineage and writeback systems remain separate composition targets."
   },
   "promotion": {
-    "required_tests": ["unit", "adversarial", "operability"],
+    "required_tests": ["python-unit", "python-adversarial", "node-parity", "canonical-position"],
     "require_exact_source_sha": true,
     "require_receipt": true,
-    "require_nonclaims": true
+    "require_nonclaims": true,
+    "next_gate": "EVOLUTION_CURSOR_DEFINED"
   },
-  "nonclaims": ["no Palantir affiliation", "reference authorization engineering system, not a production Palantir deployment"]
-=======
-  "identity": {
-    "repository_id": "GlacierEQ/palantir-object-authority-matrix",
-    "family": "elite-estate"
-  },
-  "current": {
-    "state": "PROMOTED",
-    "implemented": true,
-    "tested": true,
-    "deployed": false
+  "evolution": {
+    "cursor": "next:add_explicit_deny_and_property_effect_time_scopes_then_authenticated_identity_binding",
+    "composition_gate": "Do not bind to lineage or writeback siblings until executable receipt-to-receipt integration proof exists."
   },
   "nonclaims": [
-    "no employer affiliation",
-    "no production deployment without receipt"
-  ],
-  "donor_plan": {
-    "mode": "none",
-    "donors": []
-  },
-  "frozen_at": "2026-08-10T04:12Z"
->>>>>>> b4af5f4 (chore: Hyper Excellence Activation & structural matrix alignment)
+    "no Palantir affiliation",
+    "not a production Palantir authorization service",
+    "no property-level authorization is currently implemented",
+    "no external identity authentication is currently implemented",
+    "no exercised integration with action-lineage or writeback sibling repositories"
+  ]
 }

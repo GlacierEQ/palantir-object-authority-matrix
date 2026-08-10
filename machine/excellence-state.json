@@ -1,76 +1,22 @@
 {
   "schema": "glaciereq.repo-excellence-state.v1",
   "repository": "GlacierEQ/palantir-object-authority-matrix",
-  "principal_state": "PROMOTED",
+  "principal_state": "EVOLVING",
   "gates": {
-    "IDENTITY_RESOLVED": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "github GlacierEQ/palantir-object-authority-matrix"
-    },
-    "PROBLEM_VERIFIED": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "README/ISSUE_CONTRACT problem bound"
-    },
-    "TARGET_CONTRACT_FROZEN": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "machine/target-contract.json"
-    },
-    "DONOR_PLAN_RESOLVED": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "elite bar seed; donor_reuse=none"
-    },
-    "VERTICAL_SLICE_ALIVE": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "src mechanism + scripts/operate.py"
-    },
-    "CENTRAL_MECHANISM_PRESENT": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "central mechanism in src/"
-    },
-    "DETERMINISTIC_PROOF_GREEN": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "dual-run green tests"
-    },
-    "ADVERSARIAL_SURVIVAL": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "tests/test_adversarial.py"
-    },
-    "OPERABLE_AND_OBSERVABLE": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "scripts/operate.py dual-run PASS; primary ok"
-    },
-    "PROOF_RECEIPT_BOUND": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "machine/proof_receipt.json bound"
-    },
-    "AUTHORITY_BOUND": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "promotion_authority.json local HMAC grant"
-    },
-    "PROJECTION_TRUTH_CLOSED": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "proof=8055e22522161e37; authority=bbbcd63cb214d27b; operability=63542336c1e9c587; claim_ceiling=leaf-native; nonclaims=non_affiliation_preserved; projection_role=monolith_projection_only; readback=operate_content_checked+validator_PASS"
-    },
-    "CANONICAL_POSITION_RESOLVED": {
-      "status": "PENDING"
-    },
-    "EVOLUTION_CURSOR_DEFINED": {
-      "status": "PASS",
-      "at": "2026-08-10T06:25Z",
-      "evidence": "next:canonical_position_only_if_estate_role_resolved"
-    },
+    "IDENTITY_RESOLVED": {"status": "PASS", "at": "2026-08-10T06:25Z", "evidence": "github GlacierEQ/palantir-object-authority-matrix"},
+    "PROBLEM_VERIFIED": {"status": "PASS", "at": "2026-08-10T06:25Z", "evidence": "README/ISSUE_CONTRACT problem bound"},
+    "TARGET_CONTRACT_FROZEN": {"status": "PASS", "at": "2026-08-10T12:20Z", "evidence": "machine/target-contract.json conflict repaired and bounded to object-type/verb authorization"},
+    "DONOR_PLAN_RESOLVED": {"status": "PASS", "at": "2026-08-10T06:25Z", "evidence": "independent mechanism preserved; sibling systems are composition targets"},
+    "VERTICAL_SLICE_ALIVE": {"status": "PASS", "at": "2026-08-10T06:25Z", "evidence": "src mechanism + scripts/operate.py"},
+    "CENTRAL_MECHANISM_PRESENT": {"status": "PASS", "at": "2026-08-10T12:20Z", "evidence": "default-deny actor-role/object-type/verb authorization with exact/wildcard audit binding"},
+    "DETERMINISTIC_PROOF_GREEN": {"status": "PASS", "at": "2026-08-10T12:20Z", "evidence": "run 31387513051 proved Python mechanism cases and Node semantic parity; state-contract rerun follows staged promotion"},
+    "ADVERSARIAL_SURVIVAL": {"status": "PASS", "at": "2026-08-10T12:20Z", "evidence": "default deny, malformed actor/object/verb, invalid grants, exact-vs-wildcard and non-inheritance paths exercised"},
+    "OPERABLE_AND_OBSERVABLE": {"status": "PASS", "at": "2026-08-10T06:25Z", "evidence": "scripts/operate.py dual-run PASS; primary ok"},
+    "PROOF_RECEIPT_BOUND": {"status": "PASS", "at": "2026-08-10T06:25Z", "evidence": "machine/proof_receipt.json bound; canonical-position proof receipt will bind the final candidate head"},
+    "AUTHORITY_BOUND": {"status": "PASS", "at": "2026-08-10T12:20Z", "evidence": "authorization mechanism itself is default-deny; promotion_authority remains local HMAC governance"},
+    "PROJECTION_TRUTH_CLOSED": {"status": "PASS", "at": "2026-08-10T12:20Z", "evidence": "machine contracts explicitly exclude property policy, external identity authentication, execution, lineage and writeback integration"},
+    "CANONICAL_POSITION_RESOLVED": {"status": "PASS", "at": "2026-08-10T12:20Z", "evidence": "machine/canonical-position.json owns object_type_verb_authorization and preserves sibling boundaries"},
+    "EVOLUTION_CURSOR_DEFINED": {"status": "PASS", "at": "2026-08-10T12:20Z", "evidence": "next:add_explicit_deny_and_property_effect_time_scopes_then_authenticated_identity_binding"},
     "problem_verified": true,
     "unique_value_known": true,
     "canonical_identity_known": true,
@@ -85,105 +31,24 @@
     "evolution_cursor_defined": true
   },
   "history": [
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "DISCOVERED",
-      "to": "IDENTITY_RESOLVED",
-      "gate": "IDENTITY_RESOLVED",
-      "result": "PASS",
-      "note": "github GlacierEQ/palantir-object-authority-matrix"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "IDENTITY_RESOLVED",
-      "to": "PROBLEM_VERIFIED",
-      "gate": "PROBLEM_VERIFIED",
-      "result": "PASS",
-      "note": "README/ISSUE_CONTRACT problem bound"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "PROBLEM_VERIFIED",
-      "to": "TARGET_CONTRACTED",
-      "gate": "TARGET_CONTRACT_FROZEN",
-      "result": "PASS",
-      "note": "machine/target-contract.json"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "TARGET_CONTRACTED",
-      "to": "SEEDED",
-      "gate": "DONOR_PLAN_RESOLVED",
-      "result": "PASS",
-      "note": "elite bar seed; donor_reuse=none"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "SEEDED",
-      "to": "VERTICAL_SLICE",
-      "gate": "VERTICAL_SLICE_ALIVE",
-      "result": "PASS",
-      "note": "src mechanism + scripts/operate.py"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "VERTICAL_SLICE",
-      "to": "IMPLEMENTED",
-      "gate": "CENTRAL_MECHANISM_PRESENT",
-      "result": "PASS",
-      "note": "central mechanism in src/"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "IMPLEMENTED",
-      "to": "TESTED",
-      "gate": "DETERMINISTIC_PROOF_GREEN",
-      "result": "PASS",
-      "note": "dual-run green tests"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "TESTED",
-      "to": "ADVERSARIAL_VERIFIED",
-      "gate": "ADVERSARIAL_SURVIVAL",
-      "result": "PASS",
-      "note": "tests/test_adversarial.py"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "ADVERSARIAL_VERIFIED",
-      "to": "OPERABLE",
-      "gate": "OPERABLE_AND_OBSERVABLE",
-      "result": "PASS",
-      "note": "scripts/operate.py dual-run PASS; primary ok"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "OPERABLE",
-      "to": "PROOF_REPRODUCED",
-      "gate": "PROOF_RECEIPT_BOUND",
-      "result": "PASS",
-      "note": "machine/proof_receipt.json bound"
-    },
-    {
-      "at": "2026-08-10T06:25Z",
-      "from": "PROOF_REPRODUCED",
-      "to": "PROMOTED",
-      "gate": "AUTHORITY_BOUND",
-      "result": "PASS",
-      "note": "promotion_authority + PROJECTION_TRUTH_CLOSED"
-    }
+    {"at": "2026-08-10T06:25Z", "from": "DISCOVERED", "to": "IDENTITY_RESOLVED", "gate": "IDENTITY_RESOLVED", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "IDENTITY_RESOLVED", "to": "PROBLEM_VERIFIED", "gate": "PROBLEM_VERIFIED", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "PROBLEM_VERIFIED", "to": "TARGET_CONTRACTED", "gate": "TARGET_CONTRACT_FROZEN", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "TARGET_CONTRACTED", "to": "SEEDED", "gate": "DONOR_PLAN_RESOLVED", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "SEEDED", "to": "VERTICAL_SLICE", "gate": "VERTICAL_SLICE_ALIVE", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "VERTICAL_SLICE", "to": "IMPLEMENTED", "gate": "CENTRAL_MECHANISM_PRESENT", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "IMPLEMENTED", "to": "TESTED", "gate": "DETERMINISTIC_PROOF_GREEN", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "TESTED", "to": "ADVERSARIAL_VERIFIED", "gate": "ADVERSARIAL_SURVIVAL", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "ADVERSARIAL_VERIFIED", "to": "OPERABLE", "gate": "OPERABLE_AND_OBSERVABLE", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "OPERABLE", "to": "PROOF_REPRODUCED", "gate": "PROOF_RECEIPT_BOUND", "result": "PASS"},
+    {"at": "2026-08-10T06:25Z", "from": "PROOF_REPRODUCED", "to": "PROMOTED", "gate": "AUTHORITY_BOUND", "result": "PASS"},
+    {"at": "2026-08-10T12:20Z", "from": "PROMOTED", "to": "CANONICAL", "gate": "CANONICAL_POSITION_RESOLVED", "result": "PASS", "note": "Canonical specialist for object-type/verb authorization; target-contract conflict repaired."},
+    {"at": "2026-08-10T12:20Z", "from": "CANONICAL", "to": "EVOLVING", "gate": "EVOLUTION_CURSOR_DEFINED", "result": "PASS", "note": "Next evolution keeps default deny while adding explicit deny/property/effect/time scopes and authenticated identity."}
   ],
   "contract_ref": "machine/target-contract.json",
   "scores_ref": "machine/excellence-scores.json",
-  "evolution_cursor": "next:canonical_position_only_if_estate_role_resolved",
-  "wave": {
-    "id": "ELITE-ESTATE-2026-08-10",
-    "proof_ok": true,
-    "operable_ok": true,
-    "promoted_at": "2026-08-10T04:12Z",
-    "projection_truth_closed_at": "2026-08-10T06:25Z",
-    "policy": "glaciereq.repo-excellence.promotion-policy.v1"
-  },
-  "state": "PROMOTED"
+  "canonical_position_ref": "machine/canonical-position.json",
+  "capabilities_ref": "machine/capabilities.json",
+  "evolution_cursor": "next:add_explicit_deny_and_property_effect_time_scopes_then_authenticated_identity_binding",
+  "state": "EVOLVING"
 }

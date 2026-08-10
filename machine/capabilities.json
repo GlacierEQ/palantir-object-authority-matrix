@@ -1,1 +1,14 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/palantir-object-authority-matrix",
+  "capabilities": [
+    "default_deny_object_verb_authority",
+    "exact_grant_audit_binding",
+    "wildcard_grant_audit_binding",
+    "deterministic_authorization_fingerprint",
+    "malformed_request_fail_closed",
+    "immutable_grant_set"
+  ],
+  "truth_boundary": "Authorization-only reference mechanism over actor-role, object-type and verb. It does not implement property-level policy, authenticate external identities, validate action lineage, or execute/write back mutations.",
+  "family": "object_action_authority_matrix"
+}
