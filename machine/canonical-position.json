@@ -2,21 +2,60 @@
   "schema": "glaciereq.repo-canonical-position.v1",
   "repository": "GlacierEQ/palantir-object-authority-matrix",
   "position_state": "RESOLVED",
-  "role": "company_specific_specialist_system",
+  "role": "CANONICAL_SPECIALIST",
   "company_target": "Palantir",
   "canonical_identity": "object-authority-matrix",
+  "owns": "object_type_verb_authorization",
   "unique_value": [
-    "object/action authority is expressed as an explicit default-deny matrix rather than scattered role checks",
-    "unknown object/action combinations deny by default",
-    "wildcard authority is bounded and auditable"
+    "actor-role/object-type/verb authority is expressed as an explicit default-deny matrix rather than scattered role checks",
+    "unknown combinations refuse by default",
+    "exact and wildcard grants produce distinguishable decision reasons and fingerprints",
+    "the actual matched grant is exposed in the decision receipt",
+    "malformed request dimensions refuse without throwing open"
+  ],
+  "does_not_own": [
+    "property-level authorization",
+    "external actor authentication",
+    "causal action provenance",
+    "ontology mutation/writeback execution"
   ],
   "capability_contribution": {
     "family": "object_action_authority_matrix",
-    "extractable_mechanisms": ["default-deny object/action matrix", "bounded wildcard authority", "auditable authorization decisions"],
-    "ownership": "This repository remains the owning Palantir-specialist implementation; extraction preserves identity and lineage."
+    "extractable_mechanisms": [
+      "default_deny_object_verb_authority",
+      "exact_grant_audit_binding",
+      "wildcard_grant_audit_binding",
+      "deterministic_authorization_fingerprint",
+      "malformed_request_fail_closed"
+    ],
+    "ownership": "This repository remains the canonical Palantir-lens specialist for object-type/verb authorization; lineage and writeback remain separate control planes."
   },
-  "integration_policy": {"preserve_repository_identity":true,"preserve_lineage":true,"presentation_independent":true,"size_or_loc_not_dispositive":true,"absorption_requires_functional_equivalence":true,"absorption_requires_proof_equivalence":true},
-  "next_evolution": "Add ontology-aware authority inheritance, explicit deny explanations, and conflict resolution across nested object/action scopes without weakening default deny.",
-  "evidence_refs": ["ISSUE_CONTRACT.md","machine/target-contract.json","machine/proof_receipt.json","machine/operability_receipt.json","machine/promotion_authority.json"],
-  "nonclaims": ["no Palantir affiliation", "not a production Palantir authorization service"]
+  "relationships": [
+    {
+      "repository": "GlacierEQ/palantir-action-lineage-graph",
+      "relation": "COMPOSES_WITH",
+      "integration_exercised": false,
+      "boundary": "causal provenance does not determine authorization"
+    },
+    {
+      "repository": "GlacierEQ/palantir-ontology-writeback-ledger",
+      "relation": "COMPOSES_WITH",
+      "integration_exercised": false,
+      "boundary": "authorization may gate future writeback, but executable receipt binding has not yet been exercised"
+    }
+  ],
+  "next_evolution": "Add explicitly modeled deny rules and property/effect/time scopes only after preserving the current default-deny contract; then bind authenticated identity and writeback receipts through executable integration proof.",
+  "evidence_refs": [
+    "src/authority.py",
+    "tests/test_authority.py",
+    "tests/test_adversarial.py",
+    "machine/target-contract.json",
+    "machine/proof_receipt.json"
+  ],
+  "nonclaims": [
+    "no Palantir affiliation",
+    "not a production Palantir authorization service",
+    "no property-level authorization is currently implemented",
+    "no external identity authentication is currently implemented"
+  ]
 }
