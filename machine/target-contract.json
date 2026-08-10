@@ -1,31 +1,42 @@
 {
   "schema": "glaciereq.repo-target-contract.v1",
-  "identity": {
-    "repository_id": "GlacierEQ/palantir-object-authority-matrix",
-    "local_path": "/Users/kcbflux/job-app/repos/palantir-object-authority-matrix"
-  },
+  "identity": {"repository_id": "GlacierEQ/palantir-object-authority-matrix"},
   "current": {
-    "state": "VERTICAL_SLICE",
+    "principal_state": "PROMOTED",
     "implemented": true,
-    "tested": false,
+    "tested": true,
+    "adversarial_verified": true,
+    "operable": true,
+    "proof_receipt_bound": true,
+    "authority_bound": true,
     "deployed": false
   },
   "target": {
-    "purpose": "# ISSUE CONTRACT\n## Pain\nRole checks are ad-hoc; new object types default-allow.\n## Success\n- Explicit allowlist matrix\n- Default deny\n- Wildcard controlled and audited\n",
-    "central_bottleneck": "see ISSUE_CONTRACT"
+    "purpose": "Replace ad-hoc object authorization with an explicit default-deny authority matrix whose wildcard behavior is bounded and auditable.",
+    "central_bottleneck": "New or unfamiliar object types can inherit unsafe authority when role checks are scattered and default behavior is permissive.",
+    "success": [
+      "Object/action authority is expressed through an explicit allowlist matrix.",
+      "Unknown object or action combinations default deny.",
+      "Wildcard authority is controlled and leaves auditable evidence."
+    ]
   },
-  "invariants": [],
+  "invariants": [
+    "unknown object/action combinations default deny",
+    "allow authority is explicit",
+    "wildcard authority is bounded and auditable"
+  ],
+  "donor_plan": {
+    "status": "RESOLVED",
+    "strategy": "INDEPENDENT_MECHANISM_PRESERVED",
+    "donors": [],
+    "basis": "The current repository owns the implemented object-authority mechanism; no donor implementation is required to define or operate it.",
+    "future_extraction": "Reusable authority-matrix semantics may be extracted only with lineage, functional/proof equivalence, and preservation of this repository's identity."
+  },
   "promotion": {
-    "required_tests": [
-      "unit",
-      "adversarial"
-    ],
+    "required_tests": ["unit", "adversarial", "operability"],
     "require_exact_source_sha": true,
     "require_receipt": true,
     "require_nonclaims": true
   },
-  "nonclaims": [
-    "no employer affiliation",
-    "reference implementation only"
-  ]
+  "nonclaims": ["no Palantir affiliation", "reference authorization engineering system, not a production Palantir deployment"]
 }
