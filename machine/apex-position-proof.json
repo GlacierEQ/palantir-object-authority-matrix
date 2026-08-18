@@ -1,7 +1,7 @@
 {
-  "schema": "glaciereq.canonical-position-proof.v1",
+  "schema": "glaciereq.apex-position-proof.v1",
   "repository": "GlacierEQ/palantir-object-authority-matrix",
-  "gate": "CANONICAL_POSITION_RESOLVED",
+  "gate": "APEX_POSITION_RESOLVED",
   "result": "PASS",
   "tested_source_sha": "4c11dd140b30f81c6e03fb6b8934b41c3b157ffe",
   "workflow": {
@@ -15,9 +15,9 @@
     "wildcard grant audit binding",
     "malformed request/grant fail-closed behavior",
     "Python and Node semantic parity",
-    "canonical role and non-integration truth contracts"
+    "apex role and non-integration truth contracts"
   ],
-  "canonical_role": "CANONICAL_SPECIALIST:object_type_verb_authorization",
+  "apex_role": "APEX_SPECIALIST:object_type_verb_authorization",
   "limitations": [
     "no property-level policy",
     "no external identity authentication",

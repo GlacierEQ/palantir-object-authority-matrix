@@ -1,10 +1,10 @@
 {
-  "schema": "glaciereq.repo-canonical-position.v1",
+  "schema": "glaciereq.repo-apex-position.v1",
   "repository": "GlacierEQ/palantir-object-authority-matrix",
   "position_state": "RESOLVED",
-  "role": "CANONICAL_SPECIALIST",
+  "role": "APEX_SPECIALIST",
   "company_target": "Palantir",
-  "canonical_identity": "object-authority-matrix",
+  "apex_identity": "object-authority-matrix",
   "owns": "object_type_verb_authorization",
   "unique_value": [
     "actor-role/object-type/verb authority is expressed as an explicit default-deny matrix rather than scattered role checks",
@@ -28,7 +28,7 @@
       "deterministic_authorization_fingerprint",
       "malformed_request_fail_closed"
     ],
-    "ownership": "This repository remains the canonical Palantir-lens specialist for object-type/verb authorization; lineage and writeback remain separate control planes."
+    "ownership": "This repository remains the apex Palantir-lens specialist for object-type/verb authorization; lineage and writeback remain separate control planes."
   },
   "relationships": [
     {
